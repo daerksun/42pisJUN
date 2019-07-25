@@ -1,0 +1,180 @@
+int main()
+{
+    int r;
+    char s[] = "lagfwre-erTerP";
+    r = ft_str_is_alpha(s);
+    printf("%i", r);
+}
+
+{
+    int r = 0;
+    char s[] = "la banda grifa del 42";
+    ft_strupcase(s);
+    while(s[r] != '\0'){
+        printf("%c", s[r]);
+        r++;
+    }
+}
+
+int main(){
+    int r = 0;
+    char s[] = "salut, comment tu vas ? 42mots quarante-deux; cinqu+et+un";
+    ft_strcapitalize(s);
+    while(s[r] != '\0'){
+        printf("%c", s[r]);
+        r++;
+    }
+}
+
+int main()
+{
+    int r;
+    char d[26] = "" , s[26] = "abcdefghijklmnopqrstuvwxyz";
+    r = ft_strlcpy(d, s, 1);
+    int i = 0;
+    while(d[i] != '\0')
+    {
+        printf("%c", d[i]);
+        i++;
+    }
+}
+
+int main()
+{
+   int r;
+   char s1[] = "hosa", s2[] = "hosa";
+   r = strncmp(s1, s2, 3);
+   printf("%i\n", r);
+   r = ft_strncmp(s1, s2, 3);
+   printf("%i\n", r);
+   return (0);
+}
+
+int main()
+{
+    char s1[20] = "hola ", s2[] = "que hace";
+    ft_strcat(s1, s2);
+    printf("%s\n", s1);
+    return (0);
+}
+
+int main()
+{
+    char s1[20] = "hola", s2[] = "que hace";
+    ft_strncat(s1, s2, 6);
+    printf("%s\n", s1);
+    return (0);
+}
+
+int main(int ac, char **av)
+{
+    printf("%s\n", strstr(av[1], av[2]));
+    printf("%s\n", ft_strstr(av[1], av[2]));
+    return (ac);
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **av)
+{
+    printf("%d\n", ft_iterative_power(atoi(av[1]), atoi(av[2])));
+    return (argc);
+}
+
+
+#include <stdio.h>
+
+int main ()
+{
+    char *n = "la vi e belle";
+    printf("\n%s\n", ft_strdup(n));
+    printf("\n%s\n", strdup(n));
+}
+
+#include <stdio.h>
+int main(int argc, char **av)
+{
+    int **r;
+    int min;
+    int max;
+    int re;
+    int i;
+
+    min = atoi(av[1]);
+    max = atoi(av[2]);
+    r = (int **)malloc(sizeof(int));
+    re = ft_ultimate_range(r, min, max);
+    i = 0;
+    printf("%d\n\n", re);
+    while (i < max - min)
+    {
+        printf("%d\n", r[0][i]);
+        i++;
+    }
+    return (argc);
+}
+
+#include <stdio.h>
+ char    *ft_strcpy(char *dest, char *src)
+ {
+     int i;
+
+     i = 0;
+     while (src[i] != '\0')
+     {
+         dest[i] = src[i];
+         i++;
+     }
+     dest[i++] = '\0';
+     return (dest);
+ }
+ int     main()
+ {
+     int i;
+     char **print;
+     char *sep;
+     char *resp;
+     int xize;
+
+     i = 0;
+     print = (char **)malloc(sizeof(char *) * 13);
+     while (i < 11)
+         if (!(print[i++] = (char *)malloc(sizeof(char) * 200)))
+             return (0);
+     sep = (char *)malloc(sizeof(char )*10);
+     ft_strcpy(sep, " : ");
+     ft_strcpy(print[0], "la");
+     ft_strcpy(print[1], "calma");
+     ft_strcpy(print[2], "insola");
+     ft_strcpy(print[3], "los");
+     ft_strcpy(print[4], "PUNTOS");
+     ft_strcpy(print[5], "catarticos");
+     ft_strcpy(print[6], "que");
+     ft_strcpy(print[7], "incitan");
+     ft_strcpy(print[8], "a");
+     ft_strcpy(print[9], "la nueva");
+     ft_strcpy(print[10], "ley");
+     xize = 5;
+     resp = ft_strjoin(xize, print, sep);
+     printf("%s\n", resp);
+ }
+
+#include <stdio.h>
+
+int     main(int argc, char **av)
+{
+    char *resp;
+    resp = ft_convert_base(av[1], av[2], av[3]);
+    printf("%s", resp);
+    return (argc);
+}
+
+int main(int argc, char **av)
+{
+    char **r;
+    int i;
+    r = ft_split(av[1], av[2]);
+    while (i < 20)
+        printf("%s\n", r[i++]);
+}
