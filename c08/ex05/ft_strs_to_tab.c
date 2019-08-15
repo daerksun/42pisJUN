@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
+#include <stdlib.h>
 
 char		*ft_strdup(char *src)
 {

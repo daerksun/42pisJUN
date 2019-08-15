@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: econtrer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/04 20:29:03 by econtrer          #+#    #+#             */
-/*   Updated: 2019/07/04 23:47:14 by econtrer         ###   ########.fr       */
+/*   Created: 2019/07/10 18:46:34 by econtrer          #+#    #+#             */
+/*   Updated: 2019/07/11 01:01:48 by econtrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strcmp(char *s1, char *s2)
 {
-	write(1, &c, 1);
-}
+	int i;
+	int j;
 
-int main(int argc, char **av)
-{
-	ft_putchar('a');
+	i = 0;
+	while (s1[i] && s2[i] && (s1[i] - s2[i]) == 0)
+		i++;
+	if (!s1[i])
+		j = 0 - s2[i];
+	else
+	{
+		if (!s2[i])
+			j = s1[i] - 0;
+		else
+			j = s1[i] - s2[i];
+	}
+	return (j);
 }

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_stock_str.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: econtrer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/04 20:29:03 by econtrer          #+#    #+#             */
-/*   Updated: 2019/07/04 23:47:14 by econtrer         ###   ########.fr       */
+/*   Created: 2019/07/25 19:27:19 by econtrer          #+#    #+#             */
+/*   Updated: 2019/07/25 19:33:52 by econtrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_STOCK_STR_H
+# define FT_STOCK_STR_H
 
-void	ft_putchar(char c)
+typedef struct	s_stock_str
 {
-	write(1, &c, 1);
-}
+	int size;
+	char *str;
+	char *copy;
+}				t_stock_str;
 
-int main(int argc, char **av)
-{
-	ft_putchar('a');
-}
+t_stock_str *ft_strs_to_tab(int ac, char **av);
+
+#endif
+

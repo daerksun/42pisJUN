@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: econtrer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/04 20:29:03 by econtrer          #+#    #+#             */
-/*   Updated: 2019/07/04 23:47:14 by econtrer         ###   ########.fr       */
+/*   Created: 2019/07/07 01:53:58 by econtrer          #+#    #+#             */
+/*   Updated: 2019/07/07 02:09:20 by econtrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
+	int i;
 
-int main(int argc, char **av)
-{
-	ft_putchar('a');
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

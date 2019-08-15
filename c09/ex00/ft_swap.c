@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: econtrer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/04 20:29:03 by econtrer          #+#    #+#             */
-/*   Updated: 2019/07/04 23:47:14 by econtrer         ###   ########.fr       */
+/*   Created: 2019/07/06 19:45:09 by econtrer          #+#    #+#             */
+/*   Updated: 2019/07/06 20:03:33 by econtrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_swap(int *a, int *b)
 {
-	write(1, &c, 1);
-}
+	int aux;
 
-int main(int argc, char **av)
-{
-	ft_putchar('a');
+	aux = *a;
+	*a = *b;
+	*b = aux;
 }

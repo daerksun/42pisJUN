@@ -86,8 +86,10 @@ int		ft_check_dict(void)
 int		ft_check_buf(char *buf)
 {
 	int i;
+	int v;
 
 	i = 0;
+	v = 0;
 	while (buf[i])
 	{
 		while (buf[i] != '\n')
@@ -107,10 +109,11 @@ int		ft_check_buf(char *buf)
 				return (0);
 			while (buf[i] >= ' ' && buf[i] <= '~')
 				i++;
+			v++;
 		}
 		i++;
 		if (buf[i] == '\n')
 			i++;
 	}
-	return (1);
+	return (v);
 }
